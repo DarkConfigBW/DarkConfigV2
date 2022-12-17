@@ -21,6 +21,10 @@
             end
     end)
 
+    Bedwars_Section:NewButton("Bedwars Monkey Config", "Executes Monkey Config", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/BedWarsMonkey.lua"))()
+    end)
+
     Bedwars_Section:NewButton("Fake Bedwars Ban", "It gives you a fake bedwars ban", function()
         game.Players.LocalPlayer:Kick("You have been temporarily banned. Remaining ban duration: 5085 weeks 5 days")
     end)
@@ -77,13 +81,4 @@
 -- Executor Keybind Toggles
 
 local Executor = window:NewTab("Executor")
-local Executor_section = Executor:NewSection("Executor")
-
-Executor_Section:NewKeybind("Close UI (L)", "Closes UI", Enum.KeyCode.L, function()
-	frame.Visible = true
-    
-end)
-
-Executor_Section:NewKeybind("Close UI (K)", "Closes UI", Enum.KeyCode.K, function()
-	frame.Visible = false
-end)
+local Executor_section = Executor:NewSection("COMING SOON!")
