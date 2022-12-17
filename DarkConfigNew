@@ -1,19 +1,73 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
+local window = library.CreateLib("DarkConfigV1", "Ocean")
 
-local plrs = game.Players
- 
-local sss = game.ServerScriptService
- 
-local chatService = require(sss:WaitForChild('ChatServiceRunner'):WaitForChild('ChatService'))
- 
- 
-chatService.SpeakerAdded:Connect(function(plr)
-    
-    local speaker = chatService:GetSpeaker(plr)
-    
-    
-    if plrs[plr].UserId == 4134820513 then
-        
-        speaker:SetExtraData('NameColor', Color3.fromRGB(255, 0, 0))
-        speaker:SetExtraData('ChatColor', Color3.fromRGB(124, 238, 255))
-        speaker:SetExtraData('Tags', {{TagText = 'Owner', TagColor = Color3.fromRGB(0, 222, 255)}})        
+-- Bedwars Game Hack
+local Bedwars = window:NewTab("Bedwars")
+local Bedwars_Section = Bedwars:NewSection("Bedwars")
+
+Bedwars_Section:NewButton("Bedwars Vape Config", "Executes Vape Config V4", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
+
+Bedwars_Section:NewButton("Bedwars Boat Config AutoFarm", "Executes Autofarm, works in some gamemodes", function()
+    links = {
+        'https://raw.githubusercontent.com/boatDeckRoblox/boat-Hub_loadstringRoblox/main/auto_win_farm_Bedwars';
+        }
+        --Sometimes Works in All Gamemodes, Buggy + AC is not disabled...
+        local debug_ = loadstring
+        for i,link_ in pairs(links) do
+            debug_(game:HttpGet(link_))()
+            print(link_)
+        end
+end)
+
+Bedwars_Section:NewButton("Fake Bedwars Ban", "It gives you a fake bedwars ban", function()
+    game.Players.LocalPlayer:Kick("You have been temporarily banned. Remaining ban duration: 5085 weeks 5 days")
+end)
+
+-- Players Game Hack
+local Players = window:NewTab("Players")
+local Players_Section = Players:NewSection("Players")
+
+Players_Section:NewButton("Infinite Yield", "Basically Admin Commands", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+end)
+
+Players_Section:NewButton("Kick Yourself", "Kicks you from a game", function()
+    game.Players.LocalPlayer:Kick("You Pressed a Button to Kick Yourself")
+end)
+
+Players_Section:NewSlider("WalkSpeed", "Changes Your Walk Speed", 500, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Players_Section:NewSlider("JumpPower", "Changes Your Jump Power", 350, 50, function(d)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = d
+end)
+
+--Jailbreak Game Hack
+local Jailbreak = window:NewTab("Jailbreak")
+local Jailbreak_Section = Jailbreak:NewSection("Jailbreak")
+
+Jailbreak_Section:NewButton("JailMonkey Config", "Executes JailMoney Config", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/JailMonkey.lua"))()
+
+end)
+
+--Credits
+
+local Credits = window:NewTab("Credits")
+local Credits_Sections = Credits:NewSection("Credits")
+
+Credits_Sections:NewButton("Credits to", "", function()
+    print('credits')
+end)
+
+Credits_Sections:NewButton("ManHackWiz", "", function()
+    print('credits')
+end)
+
+Credits_Sections:NewButton("aka VapeHackWiz", "", function()
+    print('credits')
+end)
