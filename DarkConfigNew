@@ -28,6 +28,7 @@ end)
 -- Players Game Hack
 local Players = window:NewTab("Players")
 local Players_Section = Players:NewSection("Players")
+local Player = game.Players.LocalPlayer
 
 Players_Section:NewButton("Infinite Yield", "Basically Admin Commands", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
@@ -43,6 +44,8 @@ Players_Section:NewSlider("WalkSpeed", "Changes Your Walk Speed", 500, 16, funct
 end)
 
 Players_Section:NewSlider("JumpPower", "Changes Your Jump Power", 350, 50, function(d)
+    Player.AutoJumpEnabled = true
+    Player.UseJumpPower = true
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = d
 end)
 
