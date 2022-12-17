@@ -1,5 +1,5 @@
-    local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
-    local window = library.CreateLib("DarkConfigV1 - Update 1.5" , "Ocean")
+   local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
+    local window = library.CreateLib("DarkConfigV1 - Update 1.7" , "Ocean")
 
     -- Bedwars Game Hack
     local Bedwars = window:NewTab("Bedwars")
@@ -55,7 +55,7 @@
     local Jailbreak = window:NewTab("Jailbreak")
     local Jailbreak_Section = Jailbreak:NewSection("Jailbreak")
 
-    Jailbreak_Section:NewButton("JailMonkey Config", "Executes JailMoney Config", function()
+    Jailbreak_Section:NewButton("JailMonkey Config", "Executes JailMonkey Config", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/JailMonkey.lua"))()
 
     end)
@@ -78,7 +78,18 @@
         print('credits')
     end)
 
--- Executor Keybind Toggles
+    -- MM2 HACKS
+
+    local mm2 = window:NewTab("Murder Mystery 2")
+    local mm2_section = mm2:NewSection("MM2 Hacks")
+
+    mm2_section:NewButton("Eclipse Config", "Executes Eclipse Config", function()
+        loadstring(game.HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script"))()
+    end)
+
+
+
+    -- Executor Keybind Toggles
 
 local Executor = window:NewTab("Executor")
 local Executor_section = Executor:NewSection("COMING SOON!")
