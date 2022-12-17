@@ -44,8 +44,8 @@ Players_Section:NewSlider("WalkSpeed", "Changes Your Walk Speed", 500, 16, funct
 end)
 
 Players_Section:NewSlider("JumpPower", "Changes Your Jump Power", 350, 50, function(d)
-    Player.AutoJumpEnabled = true
-    Player.UseJumpPower = true
+    Player.Character.Humanoid.AutoJumpEnabled = true
+    Player.Character.Humanoid.UseJumpPower = true
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = d
 end)
 
