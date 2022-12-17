@@ -1,5 +1,5 @@
 local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
-local window = library.CreateLib("DarkConfigV1", "Ocean")
+local window = library.CreateLib("DarkConfigV1" , "Ocean")
 
 -- Bedwars Game Hack
 local Bedwars = window:NewTab("Bedwars")
@@ -58,8 +58,17 @@ end)
 --Credits
 
 local Credits = window:NewTab("Credits")
-local Credits_Sections = Credits:NewSection("Credits")
+local Credits_Sections = Credits:NewSection("Owner Credits")
+local Credits_Sections2 = Credits:NewSection("Script Credits")
 
-Credits_Sections:NewButton("Credits to ManHackWiz/VapeHackWiz for making the script", "Credits to Owner", function()
+Credits_Sections:NewButton("Credits to ManHackWiz/VapeHackWiz", "Credits to Owner", function()
     print('credits')
 end)
+
+Credits_Sections2:NewButton("Credits to 7GrandDad for Vape", "Credits to Vape Owner", function()
+print('credits')
+end)
+
+Credits_Sections2:NewButton("Credits to Boat for BoatConfig", "Credits to Boat Owner", function()
+    print('credits')
+    end)
