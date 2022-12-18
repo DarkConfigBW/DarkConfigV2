@@ -1,5 +1,5 @@
-    local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
-    local window = library.CreateLib("DarkConfigV1 - Update 1.7" , "Ocean")
+   local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
+    local window = library.CreateLib("DarkConfigV1 - Update v1.8" , "Ocean")
 
     -- Bedwars Game Hack
     local Bedwars = window:NewTab("Bedwars")
@@ -45,11 +45,7 @@
 
     Players_Section:NewSlider("WalkSpeed", "Changes Your Walk Speed", 500, 16, function(s)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-        Players_Section:NewLabel(s)
-    end)
-
-    Players_Section:NewSlider("JumpPower (Patched)", "{Patched}", 0, 0, function(s)
-        print("Patched")
+        
     end)
 
     --Jailbreak Game Hack
@@ -89,6 +85,22 @@
     end)
 
 
+    -- Build a Boat for Treasure Hack
+
+    local babft = window:NewTab("Build a Boat FT")
+    local babft_sec = babft:NewSection("Build A Boat Script")
+
+    babft_sec:NewButton("Casper's Config", "Executes Casper's Config", function()
+        _G.RedGUI = true
+        _G.Theme = "Dark" -- Must disable or remove _G.RedGUI to use
+        --Themes: Light, Dark, Mocha, Aqua and Jester
+        _G.V3rmillion = true
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/BuildABoatForTreasure.lua"))()
+    end)
+
+    babft_sec:NewButton("Ruby Hub", "Executes Ruby Hub", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/BABFT/main/Ruby%20Hub", true))()
+    end)
 
     -- Executor Keybind Toggles
 
