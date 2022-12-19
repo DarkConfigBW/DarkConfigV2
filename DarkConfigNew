@@ -1,5 +1,5 @@
     local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
-    local window = library.CreateLib("DarkConfigV2 - Update v2.0" , "Ocean")
+    local window = library.CreateLib("DarkConfigV2 - Update v2.1" , "Ocean")
 
     -- Bedwars Game Hack
     local Bedwars = window:NewTab("Bedwars")
@@ -110,9 +110,14 @@
     local bloxf = window:NewTab("Blox Fruits")
     local bloxf_sec = bloxf:NewSection("Keyless Scripts")
     local bloxf_keysec = bloxf:NewSection("Key Scripts")
+    local bloxf_others = bloxf:NewSection("Others")
 
     bloxf_sec:NewButton("Ren's Hub | BF", "Executes Ren's Hub", function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/bloxfruit/main/free'))()
+    end)
+
+    bloxf_others:NewButton("Fake Blox Fruits Ban", "Gives you a fake ban", function()
+        game.Players.LocalPlayer:Kick("You have been permanently banned from Blox Fruits for 1 week")
     end)
 
 
@@ -120,3 +125,5 @@
 
 local Executor = window:NewTab("Executor")
 local Executor_section = Executor:NewSection("COMING SOON!")
+
+-- game:HttpGet("https://raw.githubusercontent.com/DarkConfigBW/DarkConfigV2/main/DarkConfigNew", true))()
