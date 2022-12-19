@@ -1,5 +1,5 @@
     local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
-    local window = library.CreateLib("DarkConfigV1 - Update v1.9" , "Ocean")
+    local window = library.CreateLib("DarkConfigV2 - Update v2.0" , "Ocean")
 
     -- Bedwars Game Hack
     local Bedwars = window:NewTab("Bedwars")
@@ -48,8 +48,8 @@
         
     end)
 
-    Players_Section:NewSlider("JumpPower (Patched)", "{Patched}", 0, 0, function(s)
-        print("Patched")
+    Players_Section:NewSlider("JumpPower", "Changes Your Jump Power", 350, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
     end)
 
     --Jailbreak Game Hack
