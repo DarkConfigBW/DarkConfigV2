@@ -1,5 +1,5 @@
-    local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
-    local window = library.CreateLib("DarkConfigV2 - Update v2.1" , "Ocean")
+local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
+    local window = library.CreateLib("DarkConfigV2 - Update v2.2" , "Ocean")
 
     -- Bedwars Game Hack
     local Bedwars = window:NewTab("Bedwars")
@@ -52,6 +52,10 @@
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
     end)
 
+    Players_Section:NewButton("Chat Spoofer", "Impersonation >:)", function()
+        loadstring(game.HttpGet('https://raw.githubusercontent.com/DarkConfigBW/ChatSpoof/main/DarkConfigNew'))()
+    end)
+    
     --Jailbreak Game Hack
     local Jailbreak = window:NewTab("Jailbreak")
     local Jailbreak_Section = Jailbreak:NewSection("Jailbreak")
