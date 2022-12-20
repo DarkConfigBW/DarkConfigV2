@@ -1,5 +1,5 @@
     local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
-    local window = library.CreateLib("DarkConfigV2 - Update v2.3" , "Ocean")
+    local window = library.CreateLib("DarkConfigV2 - Update v2.4" , "Ocean")
 
     -- Bedwars Game Hack
     local Bedwars = window:NewTab("Bedwars")
@@ -59,6 +59,10 @@
     Players_Section:NewButton("ChatSpammer", "Spams the chat with UI", function()
         loadstring(game.HttpGet("https://raw.githubusercontent.com/DarkConfigBW/ChatSpam/main/ChatSpamma"))()
     end)
+    
+    Players_Section:NewButton("ChatBypass", "Bypasses Chat (Gonna get banned)", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/YUEx1CV6"))() 
+    end) 
     
     
     --Jailbreak Game Hack
