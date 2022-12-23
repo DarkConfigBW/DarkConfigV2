@@ -1,5 +1,5 @@
-    local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
-    local window = library.CreateLib("DarkConfigV2 - Update v2.4" , "Ocean")
+ local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
+    local window = library.CreateLib("DarkConfigV2 - Update v2.5" , "Ocean")
 
     -- Bedwars Game Hack
     local Bedwars = window:NewTab("Bedwars")
@@ -48,9 +48,9 @@
         
     end)
 
-    Players_Section:NewSlider("JumpPower", "Changes Your Jump Power", 350, 50, function(s)
+   Players_Section:NewSlider("JumpPower", "Changed your Jump Power", 350, 50, function()
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-    end)
+   end)
 
     Players_Section:NewButton("Chat Spoofer", "Impersonation >:)", function()
         loadstring(game.HttpGet('https://raw.githubusercontent.com/DarkConfigBW/ChatSpoof/main/DarkConfigNew'))()
@@ -133,10 +133,22 @@
         game.Players.LocalPlayer:Kick("You have been permanently banned from Blox Fruits for 1 week")
     end)
 
+    -- K.A.T Hacks
+    local Kat = window:NewTab("K.A.T")
+    local kat_sec = Kat:NewSection("Kat Hacks")
+
+    kat_sec:NewButton("lel69 Hub", "Executes Lel69 Hub", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/lel69/KAT/main/GUI"))()
+    end) 
+
 
     -- Executor Keybind Toggles
 
 local Executor = window:NewTab("Executor")
 local Executor_section = Executor:NewSection("COMING SOON!")
+
+Executor_section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
+	Library:DestroyUI()
+end)
 
 -- game:HttpGet("https://raw.githubusercontent.com/DarkConfigBW/DarkConfigV2/main/DarkConfigNew", true))()
