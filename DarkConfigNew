@@ -1,154 +1,158 @@
  local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
-    local window = library.CreateLib("DarkConfigV2 - Update v2.5" , "Ocean")
+local window = library.CreateLib("DarkConfigV2 - Update v2.6" , "Ocean")
 
-    -- Bedwars Game Hack
-    local Bedwars = window:NewTab("Bedwars")
-    local Bedwars_Section = Bedwars:NewSection("Bedwars")
+-- Bedwars Game Hack
+local Bedwars = window:NewTab("Bedwars")
+local Bedwars_Section = Bedwars:NewSection("Bedwars")
 
-    Bedwars_Section:NewButton("Bedwars Vape Config", "Executes Vape Config V4", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
-    end)
+Bedwars_Section:NewButton("Bedwars Vape Config", "Executes Vape Config V4", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
 
-    Bedwars_Section:NewButton("Bedwars Boat Config AutoFarm", "Executes Autofarm, works in some gamemodes", function()
-        links = {
-            'https://raw.githubusercontent.com/boatDeckRoblox/boat-Hub_loadstringRoblox/main/auto_win_farm_Bedwars';
-            }
-            --Sometimes Works in All Gamemodes, Buggy + AC is not disabled...
-            local debug_ = loadstring
-            for i,link_ in pairs(links) do
-                debug_(game:HttpGet(link_))()
-                print(link_)
-            end
-    end)
+Bedwars_Section:NewButton("Bedwars Boat Config AutoFarm", "Executes Autofarm, works in some gamemodes", function()
+    links = {
+        'https://raw.githubusercontent.com/boatDeckRoblox/boat-Hub_loadstringRoblox/main/auto_win_farm_Bedwars';
+        }
+        --Sometimes Works in All Gamemodes, Buggy + AC is not disabled...
+        local debug_ = loadstring
+        for i,link_ in pairs(links) do
+            debug_(game:HttpGet(link_))()
+            print(link_)
+        end
+end)
 
-    Bedwars_Section:NewButton("Bedwars Monkey Config", "Executes Monkey Config", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/BedWarsMonkey.lua"))()
-    end)
+Bedwars_Section:NewButton("Bedwars Monkey Config", "Executes Monkey Config", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/BedWarsMonkey.lua"))()
+end)
 
-    Bedwars_Section:NewButton("Fake Bedwars Ban", "It gives you a fake bedwars ban", function()
-        game.Players.LocalPlayer:Kick("You have been temporarily banned. Remaining ban duration: 5085 weeks 5 days")
-    end)
+Bedwars_Section:NewButton("Fake Bedwars Ban", "It gives you a fake bedwars ban", function()
+    game.Players.LocalPlayer:Kick("You have been temporarily banned. Remaining ban duration: 5085 weeks 5 days")
+end)
 
-    -- Players Game Hack
-    local Players = window:NewTab("Players")
-    local Players_Section = Players:NewSection("Players")
-    local Player = game.Players.LocalPlayer
+Bedwars_Section:NewButton("Easy.gg AutoStaff Kick", "Automatically kicks staff", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkConfigBW/StaffKickEasy.GG/main/StaffKick"))()
+end)
 
-    Players_Section:NewButton("Infinite Yield", "Basically Admin Commands", function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+-- Players Game Hack
+local Players = window:NewTab("Players")
+local Players_Section = Players:NewSection("Players")
+local Player = game.Players.LocalPlayer
 
-    end)
+Players_Section:NewButton("Infinite Yield", "Basically Admin Commands", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 
-    Players_Section:NewButton("Kick Yourself", "Kicks you from a game", function()
-        game.Players.LocalPlayer:Kick("You Pressed a Button to Kick Yourself")
-    end)
+end)
 
-    Players_Section:NewSlider("WalkSpeed", "Changes Your Walk Speed", 500, 16, function(s)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-        
-    end)
+Players_Section:NewButton("Kick Yourself", "Kicks you from a game", function()
+    game.Players.LocalPlayer:Kick("You Pressed a Button to Kick Yourself")
+end)
 
-   Players_Section:NewSlider("JumpPower", "Changed your Jump Power", 350, 50, function()
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-   end)
-
-    Players_Section:NewButton("Chat Spoofer", "Impersonation >:)", function()
-        loadstring(game.HttpGet('https://raw.githubusercontent.com/DarkConfigBW/ChatSpoof/main/DarkConfigNew'))()
-    end)
-
-    Players_Section:NewButton("ChatSpammer", "Spams the chat with UI", function()
-        loadstring(game.HttpGet("https://raw.githubusercontent.com/DarkConfigBW/ChatSpam/main/ChatSpamma"))()
-    end)
+Players_Section:NewSlider("WalkSpeed", "Changes Your Walk Speed", 500, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
     
-    Players_Section:NewButton("ChatBypass", "Bypasses Chat (Gonna get banned)", function()
-        loadstring(game:HttpGet("https://pastebin.com/raw/YUEx1CV6"))() 
-    end) 
-    
-    
-    --Jailbreak Game Hack
-    local Jailbreak = window:NewTab("Jailbreak")
-    local Jailbreak_Section = Jailbreak:NewSection("Jailbreak")
+end)
 
-    Jailbreak_Section:NewButton("JailMonkey Config", "Executes JailMonkey Config", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/JailMonkey.lua"))()
+Players_Section:NewSlider("JumpPower", "Changed your Jump Power", 350, 50, function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
 
-    end)
+Players_Section:NewButton("Chat Spoofer", "Impersonation >:)", function()
+    loadstring(game.HttpGet('https://raw.githubusercontent.com/DarkConfigBW/ChatSpoof/main/DarkConfigNew'))()
+end)
 
-    --Credits
+Players_Section:NewButton("ChatSpammer", "Spams the chat with UI", function()
+    loadstring(game.HttpGet("https://raw.githubusercontent.com/DarkConfigBW/ChatSpam/main/ChatSpamma"))()
+end)
 
-    local Credits = window:NewTab("Credits")
-    local Credits_Sections = Credits:NewSection("Owner Credits")
-    local Credits_Sections2 = Credits:NewSection("Script Credits")
+Players_Section:NewButton("ChatBypass", "Bypasses Chat (Gonna get banned)", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/YUEx1CV6"))() 
+end) 
 
-    Credits_Sections:NewButton("Credits to ManHackWiz/VapeHackWiz", "Credits to Owner", function()
-        print('credits')
-    end)
 
-    Credits_Sections2:NewButton("Credits to 7GrandDad for Vape", "Credits to Vape Owner", function()
+--Jailbreak Game Hack
+local Jailbreak = window:NewTab("Jailbreak")
+local Jailbreak_Section = Jailbreak:NewSection("Jailbreak")
+
+Jailbreak_Section:NewButton("JailMonkey Config", "Executes JailMonkey Config", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/JailMonkey.lua"))()
+
+end)
+
+--Credits
+
+local Credits = window:NewTab("Credits")
+local Credits_Sections = Credits:NewSection("Owner Credits")
+local Credits_Sections2 = Credits:NewSection("Script Credits")
+
+Credits_Sections:NewButton("Credits to ManHackWiz/VapeHackWiz", "Credits to Owner", function()
     print('credits')
-    end)
+end)
 
-    Credits_Sections2:NewButton("Credits to Boat for BoatConfig", "Credits to Boat Owner", function()
-        print('credits')
-    end)
+Credits_Sections2:NewButton("Credits to 7GrandDad for Vape", "Credits to Vape Owner", function()
+print('credits')
+end)
 
-    -- MM2 HACKS
+Credits_Sections2:NewButton("Credits to Boat for BoatConfig", "Credits to Boat Owner", function()
+    print('credits')
+end)
 
-    local mm2 = window:NewTab("Murder Mystery 2")
-    local mm2_section = mm2:NewSection("MM2 Hacks")
+-- MM2 HACKS
 
-    mm2_section:NewButton("Eclipse Config", "Executes Eclipse Config", function()
-        loadstring(game.HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script"))()
-    end)
+local mm2 = window:NewTab("Murder Mystery 2")
+local mm2_section = mm2:NewSection("MM2 Hacks")
 
-
-    -- Build a Boat for Treasure Hack
-
-    local babft = window:NewTab("Build a Boat FT")
-    local babft_sec = babft:NewSection("Build A Boat Script")
-
-    babft_sec:NewButton("Casper's Config", "Executes Casper's Config", function()
-        _G.RedGUI = true
-        _G.Theme = "Dark" -- Must disable or remove _G.RedGUI to use
-        --Themes: Light, Dark, Mocha, Aqua and Jester
-        _G.V3rmillion = true
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/BuildABoatForTreasure.lua"))()
-    end)
-
-    babft_sec:NewButton("Ruby Hub", "Executes Ruby Hub", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/BABFT/main/Ruby%20Hub", true))()
-    end)
-
-    -- Blox Fruits Hack
-    local bloxf = window:NewTab("Blox Fruits")
-    local bloxf_sec = bloxf:NewSection("Keyless Scripts")
-    local bloxf_keysec = bloxf:NewSection("Key Scripts")
-    local bloxf_others = bloxf:NewSection("Others")
-
-    bloxf_sec:NewButton("Ren's Hub | BF", "Executes Ren's Hub", function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/bloxfruit/main/free'))()
-    end)
-
-    bloxf_others:NewButton("Fake Blox Fruits Ban", "Gives you a fake ban", function()
-        game.Players.LocalPlayer:Kick("You have been permanently banned from Blox Fruits for 1 week")
-    end)
-
-    -- K.A.T Hacks
-    local Kat = window:NewTab("K.A.T")
-    local kat_sec = Kat:NewSection("Kat Hacks")
-
-    kat_sec:NewButton("lel69 Hub", "Executes Lel69 Hub", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/lel69/KAT/main/GUI"))()
-    end) 
+mm2_section:NewButton("Eclipse Config", "Executes Eclipse Config", function()
+    loadstring(game.HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script"))()
+end)
 
 
-    -- Executor Keybind Toggles
+-- Build a Boat for Treasure Hack
+
+local babft = window:NewTab("Build a Boat FT")
+local babft_sec = babft:NewSection("Build A Boat Script")
+
+babft_sec:NewButton("Casper's Config", "Executes Casper's Config", function()
+    _G.RedGUI = true
+    _G.Theme = "Dark" -- Must disable or remove _G.RedGUI to use
+    --Themes: Light, Dark, Mocha, Aqua and Jester
+    _G.V3rmillion = true
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/BuildABoatForTreasure.lua"))()
+end)
+
+babft_sec:NewButton("Ruby Hub", "Executes Ruby Hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/BABFT/main/Ruby%20Hub", true))()
+end)
+
+-- Blox Fruits Hack
+local bloxf = window:NewTab("Blox Fruits")
+local bloxf_sec = bloxf:NewSection("Keyless Scripts")
+local bloxf_keysec = bloxf:NewSection("Key Scripts")
+local bloxf_others = bloxf:NewSection("Others")
+
+bloxf_sec:NewButton("Ren's Hub | BF", "Executes Ren's Hub", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/bloxfruit/main/free'))()
+end)
+
+bloxf_others:NewButton("Fake Blox Fruits Ban", "Gives you a fake ban", function()
+    game.Players.LocalPlayer:Kick("You have been permanently banned from Blox Fruits for 1 week")
+end)
+
+-- K.A.T Hacks
+local Kat = window:NewTab("K.A.T")
+local kat_sec = Kat:NewSection("Kat Hacks")
+
+kat_sec:NewButton("lel69 Hub", "Executes Lel69 Hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/lel69/KAT/main/GUI"))()
+end) 
+
+
+-- Executor Keybind Toggles
 
 local Executor = window:NewTab("Executor")
 local Executor_section = Executor:NewSection("COMING SOON!")
 
 Executor_section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
-	Library:DestroyUI()
+Library:DestroyUI()
 end)
 
 -- game:HttpGet("https://raw.githubusercontent.com/DarkConfigBW/DarkConfigV2/main/DarkConfigNew", true))()
