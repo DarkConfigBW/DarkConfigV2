@@ -84,7 +84,7 @@ local Credits = window:NewTab("Credits")
 local Credits_Sections = Credits:NewSection("Owner Credits")
 local Credits_Sections2 = Credits:NewSection("Script Credits")
 
-Credits_Sections:NewButton("Credits to ManHackWiz/VapeHackWiz", "Credits to Owner", function()
+Credits_Sections:NewButton("Credits to ManHackWiz/VapeHackWiz/DPZ (xD)", "Credits to Owner", function()
     print('credits')
 end)
 
