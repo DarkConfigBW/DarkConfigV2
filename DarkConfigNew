@@ -1,5 +1,5 @@
- local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
-local window = library.CreateLib("DarkConfigV2 - Update v2.6" , "Ocean")
+local library = loadstring(game.HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
+local window = library.CreateLib("DarkConfigV2 - Update v2.7" , "Ocean")
 
 -- Bedwars Game Hack
 local Bedwars = window:NewTab("Bedwars")
@@ -154,5 +154,44 @@ local Executor_section = Executor:NewSection("COMING SOON!")
 Executor_section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
 Library:DestroyUI()
 end)
+
+local SS_League = window:NewTab("Super Striker League")
+local ssl_section = SS_League:NewSection("SS League Hacks")
+
+ssl_section:NewButton("jeff_2", "Executes The UI from jeff_2", function()
+    -- gexploits.com >> more of these
+    local s_rs = game:GetService("RunService")
+    local l_plr = game:GetService("Players").LocalPlayer
+    
+    
+    
+    local l_humrp = l_plr.Character and l_plr.Character:FindFirstChild("HumanoidRootPart")
+    local l_hum = l_plr.Character and l_plr.Character:FindFirstChild("Humanoid")
+    
+    local resp_con = l_plr.CharacterAdded:Connect(function(c) 
+        l_humrp = c:WaitForChild("HumanoidRootPart",3)
+        l_hum = c:WaitForChild("Humanoid",3)
+    end)
+    
+    local function dnec(signal) 
+        local s = {}
+        for _, con in ipairs(getconnections(signal)) do 
+            local func = con.Function
+            if (func and islclosure(func)) then
+                if (not is_synapse_function(func)) then 
+                    s[#s+1] = con
+                    con:Disable() 
+                end
+            end
+        end
+        return s
+    end
+end)
+    
+    
+    local speed_amnt = 5
+    
+    local ui = loadstring(game:HttpGet('https://raw.githubusercontent.com/topitbopit/rblx/main/ui-stuff/jeff_2.lua'))()
+    ui:SetColors('streamline')
 
 -- game:HttpGet("https://raw.githubusercontent.com/DarkConfigBW/DarkConfigV2/main/DarkConfigNew", true))()
