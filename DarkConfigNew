@@ -157,7 +157,7 @@ end)
 
 -- Super Striker Leaguel
 
-ocal SS_League = window:NewTab("Super Striker League")
+local SS_League = window:NewTab("Super Striker League")
 local ssl_section = SS_League:NewSection("SS League Hacks")
 
 ssl_section:NewButton("jeff_2", "Executes The UI from jeff_2", function()
