@@ -145,16 +145,6 @@ kat_sec:NewButton("lel69 Hub", "Executes Lel69 Hub", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/lel69/KAT/main/GUI"))()
 end) 
 
-
--- Executor Keybind Toggles
-
-local Executor = window:NewTab("Executor")
-local Executor_section = Executor:NewSection("COMING SOON!")
-
-Executor_section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
-Library:DestroyUI()
-end)
-
 -- Super Striker League
 
 local SS_League = window:NewTab("Super Striker League")
